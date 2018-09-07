@@ -1,0 +1,11 @@
+select,input{
+    padding: 5px;
+    width:200px ;
+}
+div{
+    padding: 5px;
+    display: inline-block;
+}
+.box{
+    border: 2px solid rgb(182, 179, 179);
+}

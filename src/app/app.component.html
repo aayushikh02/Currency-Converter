@@ -1,20 +1,85 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<div class="box">
+<h3 style="color:rgb(148, 144, 144);">{{amount}} {{this.base}} equals to </h3>
+<h1 style="color:rgb(148, 144, 144);">{{answer}} {{this.case}}</h1><br>
+<div>
+<input type="number" [(ngModel)]="amount" (click)="conversion()">
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
-
+<div>
+<select [(ngModel)]="base" (click)="conversion()">
+  <option value="AUD" name="country">Australian Dollar</option>
+  <option value="BGN" name="country">Bulgarian Lev</option>
+  <option value="BRL" name="country">Brazilian Real</option>
+  <option value="CAD" name="country">Canadian Dollar</option>
+  <option value="CHF" name="country">Swiss Franc</option>
+  <option value="CNY" name="country">Chinese Yuan</option>
+  <option value="CZK" name="country">Czech Koruna</option>
+  <option value="DKK" name="country">Danish Krone</option>
+  <option value="GBP" name="country">Pound sterling</option>
+  <option value="HKD" name="country">Hong Kong Dollar</option>
+  <option value="HRK" name="country">HRK</option>
+  <option value="HUF" name="country">Forint</option>
+  <option value="IDR" name="country">Rupiah</option>
+  <option value="ILS" name="country">New Israeli Sheqel</option>
+  <option value="INR" name="country">Indian Rupee</option>
+  <option value="ISK" name="country">Iceland Krona</option>
+  <option value="JPY" name="country">Yen</option>
+  <option value="KRW" name="country">Won</option>
+  <option value="MXN" name="country">Mexican Peso</option>
+  <option value="MYR" name="country">	Malaysian Ringgit</option>
+  <option value="NOK" name="country">Norwegian Krone</option>
+  <option value="NZD" name="country">New Zealand Dollar</option>
+  <option value="PHP" name="country">Philippine Peso</option>
+  <option value="PLN" name="country">Zloty</option>
+  <option value="RON" name="country">Romanian Leu</option>
+  <option value="RUB" name="country">Russian Ruble</option>
+  <option value="SEK" name="country">Swedish Krona</option>
+  <option value="SGD" name="country">Singapore Dollar</option>
+  <option value="THB" name="country">Thai Baht</option>
+  <option value="TRY" name="country">Turkish Lira</option>
+  <option value="USD" name="country">US Dollar</option>
+  <option value="ZAR" name="country">Rand</option>
+  <option value="EUR" name="country">Euro</option>
+</select>
+</div>
+<br>
+<div>
+<input type="number" value="{{answer}}">
+</div>
+<div>
+<select [(ngModel)]="case" (click)="conversion()">
+  <option value="AUD" name="country">Australian Dollar</option>
+  <option value="BGN" name="country">Bulgarian Lev</option>
+  <option value="BRL" name="country">Brazilian Real</option>
+  <option value="CAD" name="country">Canadian Dollar</option>
+  <option value="CHF" name="country">Swiss Franc</option>
+  <option value="CNY" name="country">Chinese Yuan</option>
+  <option value="CZK" name="country">Czech Koruna</option>
+  <option value="DKK" name="country">Danish Krone</option>
+  <option value="GBP" name="country">Pound sterling</option>
+  <option value="HKD" name="country">Hong Kong Dollar</option>
+  <option value="HRK" name="country">HRK</option>
+  <option value="HUF" name="country">Forint</option>
+  <option value="IDR" name="country">Rupiah</option>
+  <option value="ILS" name="country">New Israeli Sheqel</option>
+  <option value="INR" name="country">Indian Rupee</option>
+  <option value="ISK" name="country">Iceland Krona</option>
+  <option value="JPY" name="country">Yen</option>
+  <option value="KRW" name="country">Won</option>
+  <option value="MXN" name="country">Mexican Peso</option>
+  <option value="MYR" name="country">	Malaysian Ringgit</option>
+  <option value="NOK" name="country">Norwegian Krone</option>
+  <option value="NZD" name="country">New Zealand Dollar</option>
+  <option value="PHP" name="country">Philippine Peso</option>
+  <option value="PLN" name="country">Zloty</option>
+  <option value="RON" name="country">Romanian Leu</option>
+  <option value="RUB" name="country">Russian Ruble</option>
+  <option value="SEK" name="country">Swedish Krona</option>
+  <option value="SGD" name="country">Singapore Dollar</option>
+  <option value="THB" name="country">Thai Baht</option>
+  <option value="TRY" name="country">Turkish Lira</option>
+  <option value="USD" name="country">US Dollar</option>
+  <option value="ZAR" name="country">Rand</option>
+  <option value="EUR" name="country">Euro</option>
+</select>
+</div>
+</div>
